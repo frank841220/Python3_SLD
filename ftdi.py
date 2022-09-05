@@ -283,8 +283,6 @@ def open_ex_by_name(name):
     Serial fetched by the ListDevices fn'''
     ftHandle = c.c_ulong()
     dw_flags = c.c_ulong(FT_OPEN_BY_DESCRIPTION)
-    print(name)
-    print(c.c_char_p(name))
     _PY_OpenEx(c.c_char_p(name), dw_flags, c.byref(ftHandle))
     return FTD2XX(ftHandle)
 

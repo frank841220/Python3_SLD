@@ -352,7 +352,7 @@ sld.TAP_Reset()
 d = 0
 while True:
     
-    sld.VIR_Write(1, BitArray('0b10001')) 
+    sld.VIR_Write(1, BitArray('0b10001'))
     read_back = sld.VDR_Write_Read(BitArray(uint=d, length=7))
     sld.VIR_Write(1, BitArray('0b10000'))
     
